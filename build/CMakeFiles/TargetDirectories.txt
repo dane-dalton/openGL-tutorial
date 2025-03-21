@@ -1,0 +1,3 @@
+/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles/openGL_tutorial.dir
+/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles/edit_cache.dir
+/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles/rebuild_cache.dir

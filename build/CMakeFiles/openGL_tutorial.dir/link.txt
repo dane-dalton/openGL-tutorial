@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/openGL_tutorial.dir/src/main.cpp.o -o openGL_tutorial 
