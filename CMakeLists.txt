@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.28.3)
 project(openGL_tutorial VERSION 0.1.0)
+# cmake_policy(SET CMP0072 NEW)
 
-add_executable(openGL_tutorial src/main.cpp)
+find_package(OpenGL REQUIRED)
 
-target_link_libraries(openGL_tutorial glfw)
+add_executable(openGL_tutorial src/main.cpp src/glad.c src/glad.h)
+
+target_link_libraries(openGL_tutorial glfw OpenGL::GL)
