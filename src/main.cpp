@@ -108,7 +108,7 @@ int main(int, char**) {
     return -1;
   }
 
-  glClearColor(0.2, 0.3, 0.8, 1.0);
+  glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
   std::cout << glGetString(GL_VERSION) << std::endl;
 
@@ -142,12 +142,28 @@ int main(int, char**) {
   unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
   glUseProgram(shader);
 
+  GLCall(int location = glGetUniformLocation(shader, "u_Color"));
+  ASSERT(location != -1);
+  GLCall(glUniform4f(location, 0.8f, 0.3f, 0.7f, 1.0f));
+
+  float r = 0.0f;
+  float increment = 0.01f;
+
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
 
     glClear(GL_COLOR_BUFFER_BIT);
 
-    GLCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, nullptr));
+    GLCall(glUniform4f(location, r, 0.3f, 0.7f, 1.0f));
+    GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+
+    if (r > 1.0f) {
+      increment = -0.01f;
+    } else if (r < 0.0f) {
+      increment = 0.01f;
+    }
+
+    r+= increment;
 
     glfwSwapBuffers(window);
   }
