@@ -147,23 +147,41 @@ int main(int, char**) {
   GLCall(glUniform4f(location, 0.8f, 0.3f, 0.7f, 1.0f));
 
   float r = 0.0f;
-  float increment = 0.01f;
+  float rincrement = 0.01f;
+  float g = 0.33f;
+  float gincrement = 0.01f;
+  float b = 0.67f;
+  float bincrement = 0.01f;
 
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
 
     glClear(GL_COLOR_BUFFER_BIT);
 
-    GLCall(glUniform4f(location, r, 0.3f, 0.7f, 1.0f));
+    GLCall(glUniform4f(location, r, g, b, 1.0f));
     GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
 
     if (r > 1.0f) {
-      increment = -0.01f;
+      rincrement = -0.01f;
     } else if (r < 0.0f) {
-      increment = 0.01f;
+      rincrement = 0.01f;
     }
 
-    r+= increment;
+    if (b > 1.0f) {
+      bincrement = -0.01f;
+    } else if (b < 0.0f) {
+      bincrement = 0.01f;
+    }
+
+    if (g > 1.0f) {
+      gincrement = -0.01f;
+    } else if (g < 0.0f) {
+      gincrement = 0.01f;
+    }
+
+    r+= rincrement;
+    g+= gincrement;
+    b+= bincrement;
 
     glfwSwapBuffers(window);
   }
