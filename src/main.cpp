@@ -99,8 +99,15 @@ int main(int, char**) {
     return -1;
   }
 
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
   window = glfwCreateWindow(640, 480, "Window!", NULL, NULL);
   glfwMakeContextCurrent(window);
+
+  // Sync fps to monitor refresh rate
+  glfwSwapInterval(1);
 
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
     std::cout << "Couldn't load opengl" << std::endl;
@@ -124,12 +131,18 @@ int main(int, char**) {
     2, 3, 0
   };
 
+  // Vertex array
+  unsigned int vao;
+  GLCall(glGenVertexArrays(1, &vao));
+  GLCall(glBindVertexArray(vao));
+
   unsigned int buffer;
   glGenBuffers(1, &buffer);
   glBindBuffer(GL_ARRAY_BUFFER, buffer);
   glBufferData(GL_ARRAY_BUFFER, 4 * 2 * sizeof(float), positions, GL_STATIC_DRAW);
 
   glEnableVertexAttribArray(0);
+  // Links buffer to vao on location 0
   glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 
   unsigned int ibo;
@@ -146,42 +159,35 @@ int main(int, char**) {
   ASSERT(location != -1);
   GLCall(glUniform4f(location, 0.8f, 0.3f, 0.7f, 1.0f));
 
+
+  // Unbind
+  GLCall(glBindVertexArray(0));
+  GLCall(glUseProgram(0));
+  GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
+  GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+
   float r = 0.0f;
-  float rincrement = 0.01f;
-  float g = 0.33f;
-  float gincrement = 0.01f;
-  float b = 0.67f;
-  float bincrement = 0.01f;
+  float increment = 0.05f;
 
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
 
     glClear(GL_COLOR_BUFFER_BIT);
 
-    GLCall(glUniform4f(location, r, g, b, 1.0f));
+    GLCall(glUseProgram(shader));
+    GLCall(glUniform4f(location, r, 0.0f, 0.5f, 1.0f));
+
+    GLCall(glBindVertexArray(vao));
+
     GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
 
     if (r > 1.0f) {
-      rincrement = -0.01f;
+      increment = -0.01f;
     } else if (r < 0.0f) {
-      rincrement = 0.01f;
+      increment = 0.01f;
     }
 
-    if (b > 1.0f) {
-      bincrement = -0.01f;
-    } else if (b < 0.0f) {
-      bincrement = 0.01f;
-    }
-
-    if (g > 1.0f) {
-      gincrement = -0.01f;
-    } else if (g < 0.0f) {
-      gincrement = 0.01f;
-    }
-
-    r+= rincrement;
-    g+= gincrement;
-    b+= bincrement;
+    r+= increment;
 
     glfwSwapBuffers(window);
   }
