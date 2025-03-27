@@ -71,6 +71,9 @@ CMakeFiles/openGL_tutorial.dir/src/glad.c.o: /home/daned/repos/openGL/openGL-tut
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-tutorial/src/main.cpp \
+  /home/daned/repos/openGL/openGL-tutorial/src/IndexBuffer.h \
+  /home/daned/repos/openGL/openGL-tutorial/src/Renderer.h \
+  /home/daned/repos/openGL/openGL-tutorial/src/VertexBuffer.h \
   /home/daned/repos/openGL/openGL-tutorial/src/glad.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/KHR/khrplatform.h \
@@ -360,6 +363,12 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 
 /usr/include/c++/13/bits/stringfwd.h:
 
+/usr/include/c++/13/bits/string_view.tcc:
+
+/usr/include/c++/13/ostream:
+
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/KHR/khrplatform.h:
@@ -410,6 +419,10 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
+/usr/include/c++/13/bits/streambuf.tcc:
+
+/usr/include/endian.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/stdc-predef.h:
@@ -442,17 +455,11 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 
 /usr/include/features.h:
 
-/usr/include/c++/13/bits/string_view.tcc:
-
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/GLFW/glfw3.h:
 
 /usr/include/dlfcn.h:
-
-/usr/include/c++/13/ostream:
-
-/usr/include/c++/13/bits/streambuf_iterator.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
 
@@ -512,14 +519,6 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
 /usr/include/c++/13/bits/locale_classes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
@@ -560,6 +559,12 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/home/daned/repos/openGL/openGL-tutorial/src/Renderer.h:
+
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
@@ -577,6 +582,8 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 /usr/include/c++/13/bits/locale_classes.tcc:
 
 /usr/include/c++/13/bits/codecvt.h:
+
+/home/daned/repos/openGL/openGL-tutorial/src/IndexBuffer.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
@@ -623,6 +630,8 @@ CMakeFiles/openGL_tutorial.dir/src/main.cpp.o: /home/daned/repos/openGL/openGL-t
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/wchar.h:
+
+/home/daned/repos/openGL/openGL-tutorial/src/VertexBuffer.h:
 
 /usr/include/c++/13/bits/memory_resource.h:
 

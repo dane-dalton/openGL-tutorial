@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /home/daned/repos/openGL/openGL-tutorial/build
 
 # The main recursive "all" target.
 all: CMakeFiles/openGL_tutorial.dir/all
+all: CMakeFiles/IndexBuffer.dir/all
+all: CMakeFiles/VertexBuffer.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,21 +74,24 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/openGL_tutorial.dir/clean
+clean: CMakeFiles/IndexBuffer.dir/clean
+clean: CMakeFiles/VertexBuffer.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/openGL_tutorial.dir
 
 # All Build rule for target.
-CMakeFiles/openGL_tutorial.dir/all:
+CMakeFiles/openGL_tutorial.dir/all: CMakeFiles/VertexBuffer.dir/all
+CMakeFiles/openGL_tutorial.dir/all: CMakeFiles/IndexBuffer.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/openGL_tutorial.dir/build.make CMakeFiles/openGL_tutorial.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/openGL_tutorial.dir/build.make CMakeFiles/openGL_tutorial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles --progress-num=1,2,3 "Built target openGL_tutorial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles --progress-num=5,6,7 "Built target openGL_tutorial"
 .PHONY : CMakeFiles/openGL_tutorial.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/openGL_tutorial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/openGL_tutorial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 0
 .PHONY : CMakeFiles/openGL_tutorial.dir/rule
@@ -99,6 +104,58 @@ openGL_tutorial: CMakeFiles/openGL_tutorial.dir/rule
 CMakeFiles/openGL_tutorial.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/openGL_tutorial.dir/build.make CMakeFiles/openGL_tutorial.dir/clean
 .PHONY : CMakeFiles/openGL_tutorial.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/IndexBuffer.dir
+
+# All Build rule for target.
+CMakeFiles/IndexBuffer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles --progress-num=1,2 "Built target IndexBuffer"
+.PHONY : CMakeFiles/IndexBuffer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/IndexBuffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/IndexBuffer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 0
+.PHONY : CMakeFiles/IndexBuffer.dir/rule
+
+# Convenience name for target.
+IndexBuffer: CMakeFiles/IndexBuffer.dir/rule
+.PHONY : IndexBuffer
+
+# clean rule for target.
+CMakeFiles/IndexBuffer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/clean
+.PHONY : CMakeFiles/IndexBuffer.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/VertexBuffer.dir
+
+# All Build rule for target.
+CMakeFiles/VertexBuffer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles --progress-num=3,4 "Built target VertexBuffer"
+.PHONY : CMakeFiles/VertexBuffer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/VertexBuffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/VertexBuffer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daned/repos/openGL/openGL-tutorial/build/CMakeFiles 0
+.PHONY : CMakeFiles/VertexBuffer.dir/rule
+
+# Convenience name for target.
+VertexBuffer: CMakeFiles/VertexBuffer.dir/rule
+.PHONY : VertexBuffer
+
+# clean rule for target.
+CMakeFiles/VertexBuffer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/clean
+.PHONY : CMakeFiles/VertexBuffer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

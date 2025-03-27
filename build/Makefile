@@ -129,6 +129,80 @@ openGL_tutorial/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/openGL_tutorial.dir/build.make CMakeFiles/openGL_tutorial.dir/build
 .PHONY : openGL_tutorial/fast
 
+#=============================================================================
+# Target rules for targets named IndexBuffer
+
+# Build rule for target.
+IndexBuffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IndexBuffer
+.PHONY : IndexBuffer
+
+# fast build rule for target.
+IndexBuffer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/build
+.PHONY : IndexBuffer/fast
+
+#=============================================================================
+# Target rules for targets named VertexBuffer
+
+# Build rule for target.
+VertexBuffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 VertexBuffer
+.PHONY : VertexBuffer
+
+# fast build rule for target.
+VertexBuffer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/build
+.PHONY : VertexBuffer/fast
+
+src/IndexBuffer.o: src/IndexBuffer.cpp.o
+.PHONY : src/IndexBuffer.o
+
+# target to build an object file
+src/IndexBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/src/IndexBuffer.cpp.o
+.PHONY : src/IndexBuffer.cpp.o
+
+src/IndexBuffer.i: src/IndexBuffer.cpp.i
+.PHONY : src/IndexBuffer.i
+
+# target to preprocess a source file
+src/IndexBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/src/IndexBuffer.cpp.i
+.PHONY : src/IndexBuffer.cpp.i
+
+src/IndexBuffer.s: src/IndexBuffer.cpp.s
+.PHONY : src/IndexBuffer.s
+
+# target to generate assembly for a file
+src/IndexBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IndexBuffer.dir/build.make CMakeFiles/IndexBuffer.dir/src/IndexBuffer.cpp.s
+.PHONY : src/IndexBuffer.cpp.s
+
+src/VertexBuffer.o: src/VertexBuffer.cpp.o
+.PHONY : src/VertexBuffer.o
+
+# target to build an object file
+src/VertexBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/src/VertexBuffer.cpp.o
+.PHONY : src/VertexBuffer.cpp.o
+
+src/VertexBuffer.i: src/VertexBuffer.cpp.i
+.PHONY : src/VertexBuffer.i
+
+# target to preprocess a source file
+src/VertexBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/src/VertexBuffer.cpp.i
+.PHONY : src/VertexBuffer.cpp.i
+
+src/VertexBuffer.s: src/VertexBuffer.cpp.s
+.PHONY : src/VertexBuffer.s
+
+# target to generate assembly for a file
+src/VertexBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VertexBuffer.dir/build.make CMakeFiles/VertexBuffer.dir/src/VertexBuffer.cpp.s
+.PHONY : src/VertexBuffer.cpp.s
+
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -185,7 +259,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... IndexBuffer"
+	@echo "... VertexBuffer"
 	@echo "... openGL_tutorial"
+	@echo "... src/IndexBuffer.o"
+	@echo "... src/IndexBuffer.i"
+	@echo "... src/IndexBuffer.s"
+	@echo "... src/VertexBuffer.o"
+	@echo "... src/VertexBuffer.i"
+	@echo "... src/VertexBuffer.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

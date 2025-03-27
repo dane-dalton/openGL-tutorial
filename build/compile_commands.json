@@ -1,6 +1,18 @@
 [
 {
   "directory": "/home/daned/repos/openGL/openGL-tutorial/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/VertexBuffer.dir/src/VertexBuffer.cpp.o -c /home/daned/repos/openGL/openGL-tutorial/src/VertexBuffer.cpp",
+  "file": "/home/daned/repos/openGL/openGL-tutorial/src/VertexBuffer.cpp",
+  "output": "CMakeFiles/VertexBuffer.dir/src/VertexBuffer.cpp.o"
+},
+{
+  "directory": "/home/daned/repos/openGL/openGL-tutorial/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/IndexBuffer.dir/src/IndexBuffer.cpp.o -c /home/daned/repos/openGL/openGL-tutorial/src/IndexBuffer.cpp",
+  "file": "/home/daned/repos/openGL/openGL-tutorial/src/IndexBuffer.cpp",
+  "output": "CMakeFiles/IndexBuffer.dir/src/IndexBuffer.cpp.o"
+},
+{
+  "directory": "/home/daned/repos/openGL/openGL-tutorial/build",
   "command": "/usr/bin/c++   -g -o CMakeFiles/openGL_tutorial.dir/src/main.cpp.o -c /home/daned/repos/openGL/openGL-tutorial/src/main.cpp",
   "file": "/home/daned/repos/openGL/openGL-tutorial/src/main.cpp",
   "output": "CMakeFiles/openGL_tutorial.dir/src/main.cpp.o"

@@ -108,6 +108,8 @@ openGL_tutorial_EXTERNAL_OBJECTS =
 openGL_tutorial: CMakeFiles/openGL_tutorial.dir/src/main.cpp.o
 openGL_tutorial: CMakeFiles/openGL_tutorial.dir/src/glad.c.o
 openGL_tutorial: CMakeFiles/openGL_tutorial.dir/build.make
+openGL_tutorial: libIndexBuffer.a
+openGL_tutorial: libVertexBuffer.a
 openGL_tutorial: /usr/lib/x86_64-linux-gnu/libGLX.so
 openGL_tutorial: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 openGL_tutorial: CMakeFiles/openGL_tutorial.dir/link.txt

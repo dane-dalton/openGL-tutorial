@@ -1,0 +1,2 @@
+/usr/bin/ar qc libIndexBuffer.a CMakeFiles/IndexBuffer.dir/src/IndexBuffer.cpp.o
+/usr/bin/ranlib libIndexBuffer.a

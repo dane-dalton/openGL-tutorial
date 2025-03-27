@@ -15,7 +15,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -30,7 +32,9 @@
 					"name" : "openGL_tutorial",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -38,8 +42,22 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "IndexBuffer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-IndexBuffer-Debug-a638e38f6236f4af1a65.json",
+					"name" : "IndexBuffer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VertexBuffer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VertexBuffer-Debug-c16a01c50da379dc7a4e.json",
+					"name" : "VertexBuffer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "openGL_tutorial::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-openGL_tutorial-Debug-c465f00c431a560ae533.json",
+					"jsonFile" : "target-openGL_tutorial-Debug-74460e2435ae22716036.json",
 					"name" : "openGL_tutorial",
 					"projectIndex" : 0
 				}

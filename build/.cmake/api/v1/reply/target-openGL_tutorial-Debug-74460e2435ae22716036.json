@@ -35,7 +35,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 9,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
@@ -91,6 +91,17 @@
 			]
 		}
 	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "VertexBuffer::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "IndexBuffer::@6890427a1f51a3e7e1df"
+		}
+	],
 	"id" : "openGL_tutorial::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
@@ -107,6 +118,16 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "-lglfw",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libIndexBuffer.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libVertexBuffer.a",
 				"role" : "libraries"
 			},
 			{
@@ -143,7 +164,8 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -164,6 +186,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/glad.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/Renderer.h",
 			"sourceGroupIndex" : 1
 		}
 	],
